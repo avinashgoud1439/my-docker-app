@@ -1,0 +1,17 @@
+trigger:
+- master  # Triggers the pipeline on changes to the main branch
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+variables:
+  imageName: 'my-docker-app'  # Name of your Docker image
+
+steps:
+- task: AzureCLI@2
+  inputs:
+    azureSubscription: 'AzureConnection'  # The service connection name you set up earlier
+    scriptType: 'bash'
+    scriptLocation: 'inlineScript'
+    inlineScript: |
+      az acr build --registry <aviacr> --image $(imageName):$(Build.BuildId) .
