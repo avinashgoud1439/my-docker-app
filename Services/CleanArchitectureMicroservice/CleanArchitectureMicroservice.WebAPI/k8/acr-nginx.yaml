@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cleanarchitecturemicroservice-deployment
+  labels:
+    app: cleanarchitecturemicroservice
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: cleanarchitecturemicroservice
+  template:
+    metadata:
+      labels:
+        app: cleanarchitecturemicroservice
+    spec:
+      containers:
+      - name: cleanarchitecturemicroservice
+        image: aviacr.azurecr.io/cleanarchitecturemicroservicewebapi:latest
+        ports:
+        - containerPort: 80

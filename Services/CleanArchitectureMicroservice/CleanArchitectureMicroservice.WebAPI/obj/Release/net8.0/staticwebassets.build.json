@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "AfnNz9eNqAuzRSyB8e798lg1WeA7yAiOGeuU7HPXjZY=",
+  "Source": "CleanArchitectureMicroservice.WebAPI",
+  "BasePath": "_content/CleanArchitectureMicroservice.WebAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
